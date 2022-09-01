@@ -1,8 +1,17 @@
 class Solution {
 public:
     bool isPowerOfTwo(int n) {
-        int ans = __builtin_popcountll(n);
-        if(ans==1) return true;
+                // 1st method
+        // int ans = __builtin_popcountll(n);
+        // if(ans==1) return true;
+        // return false;
+        
+                //2nd method
+        int ans;
+        for(int i=0;i<=30;i++){
+            ans = pow(2,i);
+            if(ans==n) return true;
+        }
         return false;
     }
 };
